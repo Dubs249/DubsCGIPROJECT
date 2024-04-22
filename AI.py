@@ -47,4 +47,4 @@ f = open('datahold.txt','w')
 f.writelines(temps)
 f.close()
 
-print(response.text)
+

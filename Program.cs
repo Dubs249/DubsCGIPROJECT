@@ -1,6 +1,7 @@
 ﻿//Main
 
 string [] variable1 = new string [16];
+string [] deffention = new string [4];
 
 
 string userImput = "";
@@ -11,7 +12,7 @@ while(userImput != "-1")
 
     if(userImput=="1")
     {
-        PlayConnections(variable1);
+        PlayConnections(variable1, deffention);
     }
 
 }
@@ -24,7 +25,20 @@ while(userImput != "-1")
 
 static string Menu()
 {
+    Console.Clear();
+
+    string message = @"_______  _______  __    _  __    _  _______  _______  _______  ___   _______  __    _  _______ 
+|       ||       ||  |  | ||  |  | ||       ||       ||       ||   | |       ||  |  | ||       |
+|       ||   _   ||   |_| ||   |_| ||    ___||       ||_     _||   | |   _   ||   |_| ||  _____|
+|       ||  | |  ||       ||       ||   |___ |       |  |   |  |   | |  | |  ||       || |_____ 
+|      _||  |_|  ||  _    ||  _    ||    ___||      _|  |   |  |   | |  |_|  ||  _    ||_____  |
+|     |_ |       || | |   || | |   ||   |___ |     |_   |   |  |   | |       || | |   | _____| |
+|_______||_______||_|  |__||_|  |__||_______||_______|  |___|  |___| |_______||_|  |__||_______|";
+
+    System.Console.WriteLine(message);
+
     System.Console.WriteLine("Welcome to Connections");
+
     System.Console.WriteLine("Press 1 to play");
     System.Console.WriteLine("Press -1 to exit");
 
@@ -33,17 +47,13 @@ static string Menu()
     return imput;
 }
 
-static void PlayConnections(string [] variable1)
+static void PlayConnections(string [] variable1, string [] deffention)
 {
 
     Console.Clear();
     
-
-
-
-
     StreamReader sr= new StreamReader("datahold.txt");
-    string temp = sr.ReadLine();
+    string temp = sr.ReadLine().ToLower();
     int i=1;
     int a=0;
    
@@ -77,6 +87,10 @@ static void PlayConnections(string [] variable1)
         }
 
 
+        if(i == 7)
+        {
+            deffention[0]=temp;
+        }
 
 
 
@@ -105,6 +119,11 @@ static void PlayConnections(string [] variable1)
             a++;
         }
 
+
+        if(i == 15)
+        {
+            deffention[1]=temp;
+        }
 
 
 
@@ -136,6 +155,12 @@ static void PlayConnections(string [] variable1)
 
 
 
+        if(i == 23)
+        {
+            deffention[2]=temp;
+        }
+
+
 
 
         if (i==26)
@@ -164,6 +189,11 @@ static void PlayConnections(string [] variable1)
         }
 
 
+         if(i == 31)
+        {
+            deffention[3]=temp;
+        }
+
 
         i++;
         temp=sr.ReadLine();
@@ -174,13 +204,13 @@ static void PlayConnections(string [] variable1)
     
     RndFunction(variable1);
     
-    EnterGuesses(variable1);
+    EnterGuesses(variable1, deffention);
 
 
 
 }
 
-static void EnterGuesses(string [] variable1)
+static void EnterGuesses(string [] variable1, string [] deffention)
 {
 
 
@@ -219,7 +249,7 @@ static void EnterGuesses(string [] variable1)
             {
                 guess2 = ErrorStatement();
             }
-            if(guess1 == variable1[0] || guess1 == variable1[1] || guess1 == variable1[2] || guess1 == variable1[3] && failedGuess!="-20")
+            if(guess2 == variable1[0] || guess2 == variable1[1] || guess2 == variable1[2] || guess2 == variable1[3] && failedGuess!="-20")
             {
 
                 guess3=Console.ReadLine();
@@ -227,7 +257,7 @@ static void EnterGuesses(string [] variable1)
                 {
                     guess3 = ErrorStatement();
                 }
-                if(guess1 == variable1[0] || guess1 == variable1[1] || guess1 == variable1[2] || guess1 == variable1[3] && failedGuess!="-20")
+                if(guess3 == variable1[0] || guess3 == variable1[1] || guess3 == variable1[2] || guess3 == variable1[3] && failedGuess!="-20")
                 {
 
 
@@ -236,10 +266,14 @@ static void EnterGuesses(string [] variable1)
                     {
                         guess4 = ErrorStatement();
                     }
-                    if(guess1 == variable1[0] || guess1 == variable1[1] || guess1 == variable1[2] || guess1 == variable1[3] && failedGuess!="-20")
+                    if(guess4 == variable1[0] || guess4 == variable1[1] || guess4 == variable1[2] || guess4 == variable1[3] && failedGuess!="-20")
                     {
                         System.Console.WriteLine("Conngratulations that is one group of connections");   
-                        group1 =true;                 
+                        group1 =true;
+                        System.Console.WriteLine(variable1[0]+" "+variable1[1]+" "+variable1[2]+" "+variable1[3]);
+                        System.Console.WriteLine(deffention[0]);
+                        
+
                     }
                     else{failedGuess= Failed(ref i);}
 
@@ -261,7 +295,7 @@ static void EnterGuesses(string [] variable1)
             {
                 guess2 = ErrorStatement();
             }
-            if(guess1 == variable1[4] || guess1 == variable1[5] || guess1 == variable1[6] || guess1 == variable1[7] && failedGuess!="-20")
+            if(guess2 == variable1[4] || guess2 == variable1[5] || guess2 == variable1[6] || guess2 == variable1[7] && failedGuess!="-20")
             {
 
                 guess3=Console.ReadLine();
@@ -269,7 +303,7 @@ static void EnterGuesses(string [] variable1)
                 {
                     guess3 = ErrorStatement();
                 }
-                if(guess1 == variable1[4] || guess1 == variable1[5] || guess1 == variable1[6] || guess1 == variable1[7] && failedGuess!="-20")
+                if(guess3 == variable1[4] || guess3 == variable1[5] || guess3 == variable1[6] || guess3 == variable1[7] && failedGuess!="-20")
                 {
 
 
@@ -278,10 +312,12 @@ static void EnterGuesses(string [] variable1)
                     {
                         guess4 = ErrorStatement();
                     }
-                    if(guess1 == variable1[4] || guess1 == variable1[5] || guess1 == variable1[6] || guess1 == variable1[7] && failedGuess!="-20")
+                    if(guess4 == variable1[4] || guess4 == variable1[5] || guess4 == variable1[6] || guess4 == variable1[7] && failedGuess!="-20")
                     {
                         System.Console.WriteLine("Conngratulations that is one group of connections");   
-                        group2 =true;                 
+                        group2 =true;       
+                        System.Console.WriteLine(variable1[4]+" "+variable1[5]+" "+variable1[6]+" "+variable1[7]);
+                        System.Console.WriteLine(deffention[1]);          
                     }
                     else{failedGuess= Failed(ref i);}
 
@@ -303,7 +339,7 @@ static void EnterGuesses(string [] variable1)
             {
                 guess2 = ErrorStatement();
             }
-            if(guess1 == variable1[8] || guess1 == variable1[9] || guess1 == variable1[10] || guess1 == variable1[11] && failedGuess!="-20")
+            if(guess2 == variable1[8] || guess2 == variable1[9] || guess2 == variable1[10] || guess2 == variable1[11] && failedGuess!="-20")
             {
 
                 guess3=Console.ReadLine();
@@ -311,7 +347,7 @@ static void EnterGuesses(string [] variable1)
                 {
                     guess3 = ErrorStatement();
                 }
-                if(guess1 == variable1[8] || guess1 == variable1[9] || guess1 == variable1[10] || guess1 == variable1[11] && failedGuess!="-20")
+                if(guess3 == variable1[8] || guess3 == variable1[9] || guess3 == variable1[10] || guess3 == variable1[11] && failedGuess!="-20")
                 {
 
 
@@ -320,10 +356,12 @@ static void EnterGuesses(string [] variable1)
                     {
                         guess4 = ErrorStatement();
                     }
-                    if(guess1 == variable1[8] || guess1 == variable1[9] || guess1 == variable1[10] || guess1 == variable1[11] && failedGuess!="-20")
+                    if(guess4 == variable1[8] || guess4 == variable1[9] || guess4 == variable1[10] || guess4 == variable1[11] && failedGuess!="-20")
                     {
                         System.Console.WriteLine("Conngratulations that is one group of connections");   
-                        group3 =true;                 
+                        group3 =true;   
+                        System.Console.WriteLine(variable1[8]+" "+variable1[9]+" "+variable1[10]+" "+variable1[11]);
+                        System.Console.WriteLine(deffention[2]);              
                     }
                     else{failedGuess= Failed(ref i);}
 
@@ -365,7 +403,10 @@ static void EnterGuesses(string [] variable1)
                     if(guess1 == variable1[12] || guess1 == variable1[13] || guess1 == variable1[14] || guess1 == variable1[15] && failedGuess!="-20")
                     {
                         System.Console.WriteLine("Conngratulations that is one group of connections");   
-                        group4 =true;                 
+                        group4 =true;  
+                        System.Console.WriteLine(variable1[12]+" "+variable1[13]+" "+variable1[14]+" "+variable1[15]);
+                        System.Console.WriteLine(deffention[3]);
+
                     }
                     else{failedGuess= Failed(ref i);}
 
@@ -408,6 +449,9 @@ static void RndFunction(string [] variable1)
     List<int> cardSequence = Enumerable.Range(0, 16).ToList();
     temp = cardSequence[rnd.Next(0, cardSequence.Count)];
 
+    System.Console.WriteLine("Here are your words");
+    System.Console.WriteLine("");
+
     for(int i =0; i< 16; i++)
     {
         System.Console.WriteLine(variable1[temp]);
@@ -422,6 +466,8 @@ static void RndFunction(string [] variable1)
     System.Console.WriteLine("");
     System.Console.WriteLine("");
     System.Console.WriteLine("");
+
+
 
 }
 
@@ -441,8 +487,16 @@ static string Failed(ref int i)
 {
     string temp = "-20";
     System.Console.WriteLine("Womp Womp that is not a correct connection group");
-    System.Console.WriteLine("press enter to guess again");
     i++;
+    System.Console.WriteLine("You have " + (5-i)+" guess remaining");
     return temp;
+   
 
 }
+
+
+
+
+
+
+

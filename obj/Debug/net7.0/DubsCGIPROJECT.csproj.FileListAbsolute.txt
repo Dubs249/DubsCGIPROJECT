@@ -1,0 +1,14 @@
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/bin/Debug/net7.0/DubsCGIPROJECT
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/bin/Debug/net7.0/DubsCGIPROJECT.deps.json
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/bin/Debug/net7.0/DubsCGIPROJECT.runtimeconfig.json
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/bin/Debug/net7.0/DubsCGIPROJECT.dll
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/bin/Debug/net7.0/DubsCGIPROJECT.pdb
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/DubsCGIPROJECT.GeneratedMSBuildEditorConfig.editorconfig
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/DubsCGIPROJECT.AssemblyInfoInputs.cache
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/DubsCGIPROJECT.AssemblyInfo.cs
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/DubsCGIPROJECT.csproj.CoreCompileInputs.cache
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/DubsCGIPROJECT.dll
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/refint/DubsCGIPROJECT.dll
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/DubsCGIPROJECT.pdb
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/DubsCGIPROJECT.genruntimeconfig.cache
+/Users/keelandubs/MIS221_PROJECT/DubsCGIPROJECT/obj/Debug/net7.0/ref/DubsCGIPROJECT.dll
