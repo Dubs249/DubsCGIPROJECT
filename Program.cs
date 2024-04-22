@@ -1,4 +1,9 @@
 ﻿//Main
+//MY CGI porject is a play on the game connections. The program use an API to generate a random sets of words for the game
+//Run python3 AI.py command in the terminal, this will generate a the random words needed for connections using an api that comunicates with googles AI gemini
+
+
+
 
 string [] variable1 = new string [16];
 string [] deffention = new string [4];
@@ -57,7 +62,9 @@ static void PlayConnections(string [] variable1, string [] deffention)
     int i=1;
     int a=0;
    
-
+   
+    //This codes populates an array of the words from a text file
+    //It also populates an array for how the words are related
     while(temp!=null)
     {
 
@@ -227,7 +234,7 @@ static void EnterGuesses(string [] variable1, string [] deffention)
     
     
 
-    
+    //The gets the users guess, determines if they are right/wrong, and keeps track of how many failed guesses they have
     
     while(group1 ==false || group2 ==false || group3 ==false || group4 ==false && i<5)
     {
@@ -442,6 +449,9 @@ static void EnterGuesses(string [] variable1, string [] deffention)
 
 static void RndFunction(string [] variable1)
 {
+
+    //This Displyes the words to the user in a random order
+
     Random rnd = new Random();
 
     int temp =0;
